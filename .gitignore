@@ -1,0 +1,24 @@
+# Python
+*.pyc
+
+# Database
+db.sqlite3
+
+# Virtualenv
+/bin
+/include
+/build
+/lib
+/lib64
+/src
+/man
+.Python
+
+# Misc
+.DS_Store
+.project
+.pydevproject
+
+# files for tests
+/mobile_payments/materials
+/mobile_payments/job_materials
