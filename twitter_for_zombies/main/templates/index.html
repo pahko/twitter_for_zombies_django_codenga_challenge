@@ -1,0 +1,18 @@
+<table>
+		<tr>
+			<td>Zombie:</td>
+			<td>Date:</td>
+			<td>Content:</td>
+			<td>Number of tweet</td>
+		</tr>
+	{% for tweet in tweets %}
+		<tr>
+			<td><a href="{% url zombie_tweets tweet.zombie %}">{{ tweet.zombie }}</a></td>
+			<td><a href="{% url tweet tweet.pk %}">{{ tweet.created_at }}</a></td>
+			<td>{{ tweet.message }}</td>
+			<td>{{ forloop.counter }}</td>
+		</tr>
+	{% endfor %}
+</table>
+
+<a href="{% url crud %}">Crud</a>

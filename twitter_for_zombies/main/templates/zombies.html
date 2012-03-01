@@ -1,0 +1,18 @@
+<table>
+	<tr>
+		<td>Zombie:</td>
+		<td>Graveyard:</td>
+		<td>Edit</td>
+		<td>Delete</td>
+	</tr>
+	{% for zombie in zombies %}
+	<tr>
+		<td>{{ zombie.name }}</td>
+		<td>{{ zombie.graveyard }}</td>
+		<td><a href="{% url edit_zombie zombie.pk %}">Edit</a></td>
+		<td><a href="{% url delete_zombie zombie.pk %}">Delete</a></td>
+	</tr>
+	{% endfor %}
+</table>
+
+<a href="{% url add_new %}">Add new</a>

@@ -1,0 +1,14 @@
+<table>
+	{% for tweet in tweets.all %}
+		<tr>
+			<td>Date:</td>
+			<td>Content:</td>
+			<td>Number of tweet</td>
+		</tr>
+		<tr>
+			<td><a href="{% url tweet tweet.pk %}">{{ tweet.created_at }}</a></td>
+			<td>{{ tweet.message }}</td>
+			<td>{{ forloop.counter }}</td>
+		</tr>
+	{% endfor %}
+</table>
